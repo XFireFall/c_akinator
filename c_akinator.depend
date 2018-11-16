@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1542183023 source:/home/oleg/code_blocks_projects/c_hash/lib/list_ASI.c
+	"list_ASI.h"
+
+1542183194 /home/oleg/code_blocks_projects/c_hash/lib/list_ASI.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"constants.h"
+	"strings_int.h"
+
+1542174857 /home/oleg/code_blocks_projects/c_hash/lib/constants.h
+
+1542173769 /home/oleg/code_blocks_projects/c_hash/lib/strings_int.h
+	<stdio.h>
+	<stdlib.h>
+	<sys/stat.h>
+	<assert.h>
+	<ctype.h>
+
+1542303736 source:/home/oleg/code_blocks_projects/c_hash/lib/strings_int.c
+	"strings_int.h"
+
+1542391926 source:/home/oleg/code_blocks_projects/c_akinator/main.c
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	"../c_hash/lib/constants.h"
+	"tree_a.h"
+
+1542359636 /home/oleg/code_blocks_projects/c_akinator/tree_a.h
+	<stdio.h>
+	<stdlib.h>
+	<assert.h>
+	<string.h>
+	"../c_hash/lib/constants.h"
+	"../c_hash/lib/strings_int.h"
+
+1542391986 source:/home/oleg/code_blocks_projects/c_akinator/tree_a.c
+	"tree_a.h"
+

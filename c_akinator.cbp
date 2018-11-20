@@ -31,18 +31,18 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="../c_hash/lib/constants.h" />
-		<Unit filename="../c_hash/lib/strings_int.c">
+		<Unit filename="lib/constants.h" />
+		<Unit filename="lib/strings_int.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="../c_hash/lib/strings_int.h" />
+		<Unit filename="lib/strings_int.h" />
+		<Unit filename="lib/tree_a.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lib/tree_a.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="tree_a.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="tree_a.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

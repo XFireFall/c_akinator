@@ -454,7 +454,6 @@ void Tree_a_item_save(FILE* outfile, struct Tree_a_item* this, int num_of_tabs)
     fprinttabs(outfile, num_of_tabs);
     fprintf(outfile, "{\n");
 
-    fprinttabs(outfile, num_of_tabs);
     Tree_a_item_save(outfile, this->right, num_of_tabs + 1);
 
     fprinttabs(outfile, num_of_tabs);
@@ -465,7 +464,6 @@ void Tree_a_item_save(FILE* outfile, struct Tree_a_item* this, int num_of_tabs)
     fprinttabs(outfile, num_of_tabs);
     fprintf(outfile, "{\n");
 
-    fprinttabs(outfile, num_of_tabs);
     Tree_a_item_save(outfile, this->left, num_of_tabs + 1);
 
     fprinttabs(outfile, num_of_tabs);
@@ -569,6 +567,9 @@ int Tree_a_load(struct Tree_a* this)
             printf("Program decided to ruin your data\n");
     }
 
+    int id = this->ID;
+    Tree_a_destructor(this);
+    Tree_a_constructor(this, id);
 
     printf("Loading Tree...");
 

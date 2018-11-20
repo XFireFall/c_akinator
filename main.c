@@ -113,16 +113,16 @@ int main()
             break;
 
         case CMD_HELP:
-            printf("\texit  - Exit program\n");
             printf("\tadd   - Add new item (play the akinator game)\n");
+            printf("\tcomp  - Compare two objects\n");
+            printf("\tdump  - Print the tree in console (may be quite huge)\n");
+            printf("\texit  - Exit program\n");
+            printf("\tgraph - Make graph using the tree\n");
+            printf("\thelp  - Your host, briieef manuuaal\n");
+            printf("\tid    - Set tree ID\n");
             printf("\tinfo  - Get detailed information on the object\n");
             printf("\tload  - Load tree from file\n");
             printf("\tsave  - Save to file\n");
-            printf("\tgraph - Make graph using the tree\n");
-            printf("\tdump  - Print the tree in console (may be quite huge)\n");
-            printf("\tcomp  - Compare two objects\n");
-            printf("\tid    - Set tree ID\n");
-            printf("\thelp  - Your host, briieef manuuaal\n");
             break;
 
         default:

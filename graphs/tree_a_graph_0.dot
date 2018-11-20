@@ -1,0 +1,20 @@
+digraph tree_a_graph_0
+{
+rankdir = TB;
+node [shape = Mrecord];
+nodesep = 1.5;
+"green" -> "active" [color = "red" penwidth = 2.0 label = "NO"];
+"green" -> "long" [color = "green" penwidth = 2.0 label = "YES"];
+"active" -> "huge" [color = "red" penwidth = 2.0 label = "NO"];
+"active" -> "wild" [color = "green" penwidth = 2.0 label = "YES"];
+"huge" -> "cat" [color = "red" penwidth = 2.0 label = "NO"];
+"huge" -> "whale" [color = "green" penwidth = 2.0 label = "YES"];
+"wild" -> "dog" [color = "red" penwidth = 2.0 label = "NO"];
+"wild" -> "wolf" [color = "green" penwidth = 2.0 label = "YES"];
+"long" -> "big" [color = "red" penwidth = 2.0 label = "NO"];
+"long" -> "insect" [color = "green" penwidth = 2.0 label = "YES"];
+"big" -> "frog" [color = "red" penwidth = 2.0 label = "NO"];
+"big" -> "crocodile" [color = "green" penwidth = 2.0 label = "YES"];
+"insect" -> "snake" [color = "red" penwidth = 2.0 label = "NO"];
+"insect" -> "mantis" [color = "green" penwidth = 2.0 label = "YES"];
+}

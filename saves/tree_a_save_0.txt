@@ -1,15 +1,75 @@
-barks
+green
 {
-	dog
+	long
 	{
+		insect
+		{
+			mantis
+			{
+			}
+			{
+			}
 		}
+		{
+			snake
+			{
+			}
+			{
+			}
+		}
+	}
 	{
+		big
+		{
+			crocodile
+			{
+			}
+			{
+			}
 		}
+		{
+			frog
+			{
+			}
+			{
+			}
+		}
+	}
 }
 {
-	cat
+	active
 	{
+		wild
+		{
+			wolf
+			{
+			}
+			{
+			}
 		}
+		{
+			dog
+			{
+			}
+			{
+			}
+		}
+	}
 	{
+		huge
+		{
+			whale
+			{
+			}
+			{
+			}
 		}
+		{
+			cat
+			{
+			}
+			{
+			}
+		}
+	}
 }

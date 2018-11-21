@@ -48,27 +48,77 @@ green
 			}
 		}
 		{
-			dog
+			human
 			{
+				young
+				{
+					Jhestkov
+					{
+					}
+					{
+					}
+				}
+				{
+					Ovchinkin
+					{
+					}
+					{
+					}
+				}
 			}
 			{
+				dog
+				{
+				}
+				{
+				}
 			}
 		}
 	}
 	{
 		huge
 		{
-			whale
+			gray
 			{
+				elephant
+				{
+				}
+				{
+				}
 			}
 			{
+				whale
+				{
+				}
+				{
+				}
 			}
 		}
 		{
-			cat
+			small
 			{
+				mouse
+				{
+				}
+				{
+				}
 			}
 			{
+				human
+				{
+					Chubarov
+					{
+					}
+					{
+					}
+				}
+				{
+					cat
+					{
+					}
+					{
+					}
+				}
 			}
 		}
 	}

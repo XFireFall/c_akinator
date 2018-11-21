@@ -187,15 +187,22 @@ void Tree_a_difference(struct Tree_a* this, const int* first_name,const  int* se
     Tree_a_item_path(scnd_item, &sec_p);
 
     int i = 0;
-    while(fir_a[i + 1] == sec_a[i + 1] && fir_a[i + 1] != NULL)
+    while(fir_a[i] == sec_a[i] && fir_a[i] != NULL)
         i++;
+    i--;
 
-    printline(first_name);
-    printf(" is not ");
-    printline(sec_a[i]->name);
+    printline(frst_item->name);
+    printf(" is ");
+    if(fir_a[i]->left == fir_a[i + 1])
+        printf("not ");
+    printline(fir_a[i]->name);
+
     printf(", but ");
-    printline(second_name);
-    printf(" is\n");
+    printline(scnd_item->name);
+    printf(" is");
+    if(fir_a[i]->right == fir_a[i + 1])
+        printf(" not");
+    printf("\n");
 
     free(fir_a);
     free(sec_a);
@@ -334,30 +341,28 @@ void Tree_a_dump(struct Tree_a* this)
 //**************
 
 //======================item__GRAPH__===========================
-void Tree_a_item_graph_edge(FILE* outfile, struct Tree_a_item* this)
+void Tree_a_item_graph_edge(FILE* outfile, struct Tree_a_item* this, int* cur_num)
 {
     assert(outfile != NULL);
 
     if(this == NULL)
         return;
 
+    int item_num = *cur_num;
+    ++*cur_num;
+
+    fprintf(outfile, "%d [label = \"", item_num);
+    fprintline(outfile, this->name);
+    fprintf(outfile, "\"]\n");
+
     if(this->right == NULL)
         return;
 
-    fprintf(outfile, "\"");
-    fprintline(outfile, this->name);
-    fprintf(outfile, "\" -> \"");
-    fprintline(outfile, this->left->name);
-    fprintf(outfile, "\" [color = \"red\" penwidth = 2.0 label = \"NO\"];\n");
+    fprintf(outfile, "%d -> %d [color = \"red\" penwidth = 2.0 label = \"NO\"];\n", item_num, *cur_num);
+    Tree_a_item_graph_edge(outfile, this->left, cur_num);
 
-    fprintf(outfile, "\"");
-    fprintline(outfile, this->name);
-    fprintf(outfile, "\" -> \"");
-    fprintline(outfile, this->right->name);
-    fprintf(outfile, "\" [color = \"green\" penwidth = 2.0 label = \"YES\"];\n");
-
-    Tree_a_item_graph_edge(outfile, this->left);
-    Tree_a_item_graph_edge(outfile, this->right);
+    fprintf(outfile, "%d -> %d [color = \"green\" penwidth = 2.0 label = \"YES\"];\n", item_num, *cur_num);
+    Tree_a_item_graph_edge(outfile, this->right, cur_num);
     return;
 }
 
@@ -388,11 +393,15 @@ int Tree_a_make_graph(struct Tree_a* this)
                       "node [shape = Mrecord];\n"
                       "nodesep = 1.5;\n", this->ID);
 
-    Tree_a_item_graph_edge(outfile, this->head);
+    int cur_num = 0;
+    Tree_a_item_graph_edge(outfile, this->head, &cur_num);
 
     fprintf(outfile, "}\n");
+
     fclose(outfile);
     printf("\t[  "GREEN"OK"RESET"  ]\n");
+    printf("Wrote graph data in \"%s\"\n", outfilename);
+
     return Tree_a_OK(this);
 }
 
@@ -490,7 +499,7 @@ void Tree_a_save(struct Tree_a* this)
     fclose(outfile);
 
     printf("\t[  "GREEN"OK"RESET"  ]\n");
-
+    printf("Saved to \"%s\"\n", outfilename);
     return;
 }
 
@@ -571,7 +580,7 @@ int Tree_a_load(struct Tree_a* this)
     Tree_a_destructor(this);
     Tree_a_constructor(this, id);
 
-    printf("Loading Tree...");
+    printf("Loading data...");
 
     char infilename[MAX_STR_LEN] = "";
     sprintf(infilename, "saves/tree_a_save_%d.txt", this->ID);
@@ -591,6 +600,8 @@ int Tree_a_load(struct Tree_a* this)
 
     fclose(infile);
     printf("\t[  "GREEN"OK"RESET"  ]\n");
+    printf("Loaded from \"%s\"\n", infilename);
+
     return Tree_a_OK(this);
 }
 

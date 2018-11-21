@@ -238,11 +238,12 @@ void Tree_a_dump(struct Tree_a* this);
  *
  * \param outfile FILE* [in] - the .dot file to print to
  * \param this struct Tree_a_item* [in] - the item to print
+ * \param cur_num int* [in/out] - index of current item
  *
  * \note The given file must be opened
  *
  */
-void Tree_a_item_graph_edge(FILE* outfile, struct Tree_a_item* this);
+void Tree_a_item_graph_edge(FILE* outfile, struct Tree_a_item* this, int* cur_num);
 
 //======================tree__GRAPH__===========================
 /** \brief Prints data for DOTTY graph in .dot file (file name depends on the tree ID)

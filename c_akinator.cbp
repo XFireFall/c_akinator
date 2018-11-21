@@ -31,6 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="lib/commands.h" />
 		<Unit filename="lib/constants.h" />
 		<Unit filename="lib/strings_int.c">
 			<Option compilerVar="CC" />

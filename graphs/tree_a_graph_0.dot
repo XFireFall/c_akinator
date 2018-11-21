@@ -3,18 +3,53 @@ digraph tree_a_graph_0
 rankdir = TB;
 node [shape = Mrecord];
 nodesep = 1.5;
-"green" -> "active" [color = "red" penwidth = 2.0 label = "NO"];
-"green" -> "long" [color = "green" penwidth = 2.0 label = "YES"];
-"active" -> "huge" [color = "red" penwidth = 2.0 label = "NO"];
-"active" -> "wild" [color = "green" penwidth = 2.0 label = "YES"];
-"huge" -> "cat" [color = "red" penwidth = 2.0 label = "NO"];
-"huge" -> "whale" [color = "green" penwidth = 2.0 label = "YES"];
-"wild" -> "dog" [color = "red" penwidth = 2.0 label = "NO"];
-"wild" -> "wolf" [color = "green" penwidth = 2.0 label = "YES"];
-"long" -> "big" [color = "red" penwidth = 2.0 label = "NO"];
-"long" -> "insect" [color = "green" penwidth = 2.0 label = "YES"];
-"big" -> "frog" [color = "red" penwidth = 2.0 label = "NO"];
-"big" -> "crocodile" [color = "green" penwidth = 2.0 label = "YES"];
-"insect" -> "snake" [color = "red" penwidth = 2.0 label = "NO"];
-"insect" -> "mantis" [color = "green" penwidth = 2.0 label = "YES"];
+0 [label = "green"]
+0 -> 1 [color = "red" penwidth = 2.0 label = "NO"];
+1 [label = "active"]
+1 -> 2 [color = "red" penwidth = 2.0 label = "NO"];
+2 [label = "huge"]
+2 -> 3 [color = "red" penwidth = 2.0 label = "NO"];
+3 [label = "small"]
+3 -> 4 [color = "red" penwidth = 2.0 label = "NO"];
+4 [label = "human"]
+4 -> 5 [color = "red" penwidth = 2.0 label = "NO"];
+5 [label = "cat"]
+4 -> 6 [color = "green" penwidth = 2.0 label = "YES"];
+6 [label = "Chubarov"]
+3 -> 7 [color = "green" penwidth = 2.0 label = "YES"];
+7 [label = "mouse"]
+2 -> 8 [color = "green" penwidth = 2.0 label = "YES"];
+8 [label = "gray"]
+8 -> 9 [color = "red" penwidth = 2.0 label = "NO"];
+9 [label = "whale"]
+8 -> 10 [color = "green" penwidth = 2.0 label = "YES"];
+10 [label = "elephant"]
+1 -> 11 [color = "green" penwidth = 2.0 label = "YES"];
+11 [label = "wild"]
+11 -> 12 [color = "red" penwidth = 2.0 label = "NO"];
+12 [label = "human"]
+12 -> 13 [color = "red" penwidth = 2.0 label = "NO"];
+13 [label = "dog"]
+12 -> 14 [color = "green" penwidth = 2.0 label = "YES"];
+14 [label = "young"]
+14 -> 15 [color = "red" penwidth = 2.0 label = "NO"];
+15 [label = "Ovchinkin"]
+14 -> 16 [color = "green" penwidth = 2.0 label = "YES"];
+16 [label = "Jhestkov"]
+11 -> 17 [color = "green" penwidth = 2.0 label = "YES"];
+17 [label = "wolf"]
+0 -> 18 [color = "green" penwidth = 2.0 label = "YES"];
+18 [label = "long"]
+18 -> 19 [color = "red" penwidth = 2.0 label = "NO"];
+19 [label = "big"]
+19 -> 20 [color = "red" penwidth = 2.0 label = "NO"];
+20 [label = "frog"]
+19 -> 21 [color = "green" penwidth = 2.0 label = "YES"];
+21 [label = "crocodile"]
+18 -> 22 [color = "green" penwidth = 2.0 label = "YES"];
+22 [label = "insect"]
+22 -> 23 [color = "red" penwidth = 2.0 label = "NO"];
+23 [label = "snake"]
+22 -> 24 [color = "green" penwidth = 2.0 label = "YES"];
+24 [label = "mantis"]
 }

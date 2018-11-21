@@ -4,17 +4,46 @@
 	<ActiveTarget name="Debug" />
 	<File name="lib/tree_a.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1163" topLine="28" />
-		</Cursor>
-	</File>
-	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3310" topLine="105" />
+			<Cursor1 position="6991" topLine="219" />
 		</Cursor>
 	</File>
 	<File name="lib/tree_a.c" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="10058" topLine="450" />
+			<Cursor1 position="7670" topLine="135" />
+		</Cursor>
+		<Folding>
+			<Collapse line="5" />
+			<Collapse line="18" />
+			<Collapse line="31" />
+			<Collapse line="48" />
+			<Collapse line="62" />
+			<Collapse line="73" />
+			<Collapse line="85" />
+			<Collapse line="99" />
+			<Collapse line="125" />
+			<Collapse line="144" />
+			<Collapse line="156" />
+			<Collapse line="218" />
+			<Collapse line="230" />
+			<Collapse line="241" />
+			<Collapse line="265" />
+			<Collapse line="411" />
+			<Collapse line="439" />
+			<Collapse line="450" />
+			<Collapse line="484" />
+			<Collapse line="509" />
+			<Collapse line="742" />
+			<Collapse line="756" />
+		</Folding>
+	</File>
+	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="937" topLine="28" />
+		</Cursor>
+	</File>
+	<File name="lib/commands.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1260" topLine="11" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
